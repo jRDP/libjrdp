@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="WARN" monitorInterval="5">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+    </appenders>
+    <loggers>
+        <Logger name="de.coderarea.jrdp.protocol.T123" level="info"/>
+        <Logger name="de.coderarea.jrdp.protocol.ASN1" level="info"/>
+        <Logger name="de.coderarea.jrdp.protocol.ASN1.PER" level="info"/>
+        <Logger name="de.coderarea.jrdp.protocol.ASN1.BitInputStream" level="info"/>
+        <Logger name="de.coderarea.jrdp.protocol.ASN1.BitOutputStream" level="info"/>
+        <Logger name="de.coderarea.jrdp.protocol.GCC" level="debug"/>
+        <root level="trace">
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
