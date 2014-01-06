@@ -26,13 +26,25 @@
     <packaging>jar</packaging>
 
     <name>libjrdp</name>
-    <url>http://maven.apache.org</url>
+    <url>http://jrdp.github.io</url>
+
 
     <properties>
-
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <org.apache.logging.log4j.version>2.0-beta9</org.apache.logging.log4j.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>com.github.jrdp.mvn-repository</id>
+            <url>https://raw.github.com/jRDP/mvn-repository/master</url>
+            <!-- use snapshot version -->
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <dependencies>
         <!-- Logging -->
@@ -70,13 +82,14 @@
         </dependency>
 
         <!-- BinaryNotes (manually created) -->
-        <!-- mvn install:install-file -Dfile=binarynotes.jar -DgroupId=org.bn -DartifactId=binarynotes -Dversion=1.5.3 -Dpackaging=jar -->
+        <!-- mvn deploy:deploy-file  -DgroupId=org.bn -DartifactId=binarynotes -Dversion=1.5.3 -Dpackaging=jar -Dfile=binarynotes.jar -DrepositoryId=com.github.jrdp.mvn-repository -Durl=file://... -->
         <dependency>
             <groupId>org.bn</groupId>
             <artifactId>binarynotes</artifactId>
             <version>1.5.3</version>
         </dependency>
-        <!-- mvn install:install-file -Dfile=binarynotesd.jar -DgroupId=org.bn -DartifactId=binarynotesd -Dversion=1.5.3 -Dpackaging=jar -->
+
+        <!-- mvn deploy:deploy-file  -DgroupId=org.bn -DartifactId=binarynotesd -Dversion=1.5.3 -Dpackaging=jar -Dfile=binarynotesd.jar -DrepositoryId=com.github.jrdp.mvn-repository -Durl=file://... -->
         <dependency>
             <groupId>org.bn</groupId>
             <artifactId>binarynotesd</artifactId>
