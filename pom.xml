@@ -140,6 +140,7 @@
                         <exclude>LICENSE</exclude>
                         <exclude>README.md</exclude>
                     </excludes>
+                    <show>package</show>
                 </configuration>
                 <executions>
                     <execution>
