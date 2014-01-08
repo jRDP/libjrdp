@@ -151,7 +151,7 @@ public class DomainMCSPDU extends ASN1Choice {
     private SendDataRequest sendDataRequest;//		SendDataRequest,
 
     @ASN1Tag(26)
-    private ASN1Object sendDataIndication;//	SendDataIndication,
+    private SendDataIndication sendDataIndication;//	SendDataIndication,
 
     @ASN1Tag(27)
     private ASN1Object uniformSendDataRequest;//		UniformSendDataRequest,
@@ -250,5 +250,13 @@ public class DomainMCSPDU extends ASN1Choice {
 
     public void setSendDataRequest(SendDataRequest sendDataRequest) {
         this.sendDataRequest = sendDataRequest;
+    }
+
+    public SendDataIndication getSendDataIndication() {
+        return sendDataIndication;
+    }
+
+    public void setSendDataIndication(SendDataIndication sendDataIndication) {
+        this.sendDataIndication = sendDataIndication;
     }
 }

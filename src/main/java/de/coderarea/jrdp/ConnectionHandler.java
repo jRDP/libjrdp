@@ -17,10 +17,7 @@
 package de.coderarea.jrdp;
 
 
-import de.coderarea.jrdp.protocol.BasicSettingsExchangeSequence;
-import de.coderarea.jrdp.protocol.ChannelConnectionSequence;
-import de.coderarea.jrdp.protocol.ConnectionInitiationSequence;
-import de.coderarea.jrdp.protocol.RDPSettings;
+import de.coderarea.jrdp.protocol.*;
 import de.coderarea.jrdp.protocol.T123.T123Packet;
 import de.coderarea.jrdp.protocol.X224.X224Data;
 import de.coderarea.jrdp.protocol.X224.X224Packet;
@@ -61,6 +58,7 @@ public class ConnectionHandler implements Runnable {
 
             new ChannelConnectionSequence(this).run();
 
+            new LicensingSequence(this).run();
 
             System.out.println("--End--");
             while (!socket.isClosed()) {
