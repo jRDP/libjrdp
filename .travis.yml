@@ -1,6 +1,7 @@
 language: java
-before_script:
-  - echo $TKEY
+
+after_success:
+  - .travis/after_success.sh	
 
 env:
-  - secure: "mNWoCewBxzUJf6DFF36HZCTpYEmU23gP0Vrav4zxhapl67Xx7QIwY6wcxHx6EqepHx5zvTr+gk11qDw7mS3i+RoHNjR1LxzxzKtAY9JIgzPXPE78Hxu8vQrjacbSy7Ciu6TVWXv6BAWPs5EPeZb/JdDf1XpdM4wZHcv43UcGSyo="
+  - secure: "OaBI7qdEvQyB9v/Hcvdw30MUZR8YqA+5bl8QZU2JAcsMcCrA7XYkaE7X9eg7w6FqaR2z6mvKIFb+8ryGQxGrs/cKyPyesOr9vwSlJsftt2o4jveWxPIAqtuq2HYxjjvkXIvkp2JviZpJc4f9iCA9xd0jGgEfBbtpxJMHwgxvBnQ="
