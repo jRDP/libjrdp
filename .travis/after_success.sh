@@ -7,6 +7,6 @@
 #echo "$TRAVIS_BRANCH"
 #&& [ "$TRAVIS_JDK_VERSION" == "oraclejdk7" ]
 if [ "$TRAVIS_REPO_SLUG" == "jRDP/libjrdp" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
- ./publish_javadoc.sh
+ .travis/publish_javadoc.sh
 fi
 
