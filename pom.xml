@@ -131,6 +131,7 @@
                 <configuration>
                     <header>LICENSE-HEADER</header>
                     <excludes>
+                        <exclude>.travis/**</exclude>
                         <exclude>**/README</exclude>
                         <exclude>src/test/resources/**</exclude>
                         <exclude>src/main/resources/**</exclude>
