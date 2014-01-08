@@ -2,12 +2,12 @@
 
 echo -e "Starting latest javadoc auto publish...\n"
 
-  cp -R build/docs/javadoc $HOME/javadoc-latest
+  cp -R ../build/docs/javadoc $HOME/javadoc-latest
 
   cd $HOME
   git config --global user.email "travis@travis-ci.org"
   git config --global user.name "travis-ci"
-  git clone --quiet --branch=gh-pages https://${GH_TOKEN}@github.com/jRDP/libjrdp gh-pages > /dev/null
+  git clone --quiet --branch=gh-pages https://${GH_PAGES}@github.com/jRDP/libjrdp gh-pages > /dev/null
 
   cd gh-pages
   git rm -rf ./javadoc/latest
