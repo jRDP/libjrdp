@@ -67,7 +67,18 @@ public class TsBasicSecurityHeader extends TsPacket {
 
     @Override
     protected void encode(OutputStream output) throws IOException {
-        throw new UnsupportedOperationException("not implemented");
+        assert !getFlags().contains(TsSecurityFlag.SEC_FLAGSHI_VALID) : "not implemented";
+
+        int flags = 0;
+        for (TsSecurityFlag f : getFlags()) {
+            flags += f.getValue();
+        }
+
+        // A 16-bit, unsigned integer that contains security flags.
+        writeShort(output, flags);
+
+        // A 16-bit, unsigned integer. This field is reserved for future use.
+        writeShort(output, 0);
     }
 
     public Set<TsSecurityFlag> getFlags() {
