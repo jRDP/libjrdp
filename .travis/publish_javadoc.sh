@@ -2,7 +2,10 @@
 
 echo -e "Starting latest javadoc auto publish...\n"
 
-  cp -R ../build/docs/javadoc $HOME/javadoc-latest
+  cd ../build
+  mvn javadoc:javadoc || return -1
+  
+  cp -R target/site/apidocs $HOME/javadoc-latest
 
   cd $HOME
   git config --global user.email "travis@travis-ci.org"
