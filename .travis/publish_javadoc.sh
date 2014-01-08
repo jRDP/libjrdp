@@ -2,7 +2,7 @@
 
 echo -e "Starting latest javadoc auto publish...\n"
 
-  cd ../build
+  #cd ../build
   mvn javadoc:javadoc || return -1
   
   cp -R target/site/apidocs $HOME/javadoc-latest
