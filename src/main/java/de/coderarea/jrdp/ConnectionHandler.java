@@ -17,10 +17,14 @@
 package de.coderarea.jrdp;
 
 
-import de.coderarea.jrdp.protocol.*;
+import de.coderarea.jrdp.protocol.RDPSettings;
 import de.coderarea.jrdp.protocol.T123.T123Packet;
 import de.coderarea.jrdp.protocol.X224.X224Data;
 import de.coderarea.jrdp.protocol.X224.X224Packet;
+import de.coderarea.jrdp.protocol.connection.BasicSettingsExchangeSequence;
+import de.coderarea.jrdp.protocol.connection.ChannelConnectionSequence;
+import de.coderarea.jrdp.protocol.connection.ConnectionInitiationSequence;
+import de.coderarea.jrdp.protocol.connection.LicensingSequence;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

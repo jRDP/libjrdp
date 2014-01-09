@@ -16,32 +16,21 @@
  */
 package de.coderarea.jrdp.protocol.MCS;
 
-import de.coderarea.jrdp.protocol.ASN1.ASN1Integer;
-import de.coderarea.jrdp.protocol.ASN1.ASN1Object;
 import de.coderarea.jrdp.protocol.ASN1.ASN1OctetString;
 import de.coderarea.jrdp.protocol.ASN1.ASN1Sequence;
-import de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Extensible;
-import de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Optional;
 import de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Tag;
 
 /**
- * SendDataIndication ::= SEQUENCE
- * {
- * initiator UserId,
- * channelId ChannelId,
- * reliability BOOLEAN,
- * domainReferenceID INTEGER (0 .. 65535) OPTIONAL,
- * dataPriority DataPriority,
- * segmentation Segmentation,
- * userData OCTET STRING,
- * totalDataSize INTEGER OPTIONAL,
- * nonStandard SEQUENCE OF NonStandardParameter OPTIONAL,
- * ...
- * }
+ SendDataIndication ::= [APPLICATION 26] IMPLICIT SEQUENCE {
+ initiator     UserId,
+ channelId     ChannelId,
+ dataPriority  DataPriority,
+ segmentation  Segmentation,
+ userData      OCTET STRING
+ }
  *
  * @author Sascha Bidermann
  */
-@ASN1Extensible
 public class SendDataIndication extends ASN1Sequence {
 
     @ASN1Tag(0)
@@ -49,13 +38,6 @@ public class SendDataIndication extends ASN1Sequence {
 
     @ASN1Tag(1)
     private ChannelId channelId;
-
-    @ASN1Tag(2)
-    private Boolean reliability;
-
-    @ASN1Tag(3)
-    @ASN1Optional
-    private DomainReferenceId domainReferenceId;
 
     @ASN1Tag(4)
     private DataPriority dataPriority;
@@ -65,14 +47,6 @@ public class SendDataIndication extends ASN1Sequence {
 
     @ASN1Tag(6)
     private ASN1OctetString userData;
-
-    @ASN1Tag(7)
-    @ASN1Optional
-    private ASN1Integer totalDataSize;
-
-    @ASN1Tag(8)
-    @ASN1Optional
-    private ASN1Object nonStandard; // not implemented
 
     public UserId getInitiator() {
         return initiator;
@@ -104,14 +78,6 @@ public class SendDataIndication extends ASN1Sequence {
 
     public void setSegmentation(Segmentation segmentation) {
         this.segmentation = segmentation;
-    }
-
-    public Boolean getReliability() {
-        return reliability;
-    }
-
-    public void setReliability(Boolean reliability) {
-        this.reliability = reliability;
     }
 
     public DataPriority getDataPriority() {

@@ -55,19 +55,18 @@ public class TsValidLicenseData extends TsSecurityPacket {
         // bbErrorInfo field MUST contain an empty binary large object (BLOB)
 
 
-        // wBlobType of type BB_ERROR_BLOB (0x0004)
-        writeShort(bufferStream, 0x0004);
-
-        // wBlobLen The size in bytes of the binary information in the blobData field
-        writeShort(bufferStream, 8);  // 8 Bytes = dwErrorCode (4) + dwStateTransition (4)
-
-        /** begin blobData **/
-
         // dwErrorCode STATUS_VALID_CLIENT 0x00000007
         writeInteger(bufferStream, 0x07);
 
         // dwStateTransition ST_NO_TRANSITION 0x00000002
         writeInteger(bufferStream, 0x02);
+
+        /** begin bbErrorInfo  **/
+        // wBlobType of type BB_ERROR_BLOB (0x0004)
+        writeShort(bufferStream, 0x0004);
+
+        // wBlobLen The size in bytes of the binary information in the blobData field
+        writeShort(bufferStream, 0); // empty
 
         this.setHeader(new TsBasicSecurityHeader(Collections.singleton(TsSecurityFlag.SEC_LICENSE_PKT)));
         this.getHeader().encode(output);

@@ -14,10 +14,9 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with libjrdp. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.coderarea.jrdp.protocol;
+package de.coderarea.jrdp.protocol.connection;
 
 import de.coderarea.jrdp.ConnectionHandler;
-import de.coderarea.jrdp.SequenceHandler;
 import de.coderarea.jrdp.protocol.ASN1.ASN1Encoder;
 import de.coderarea.jrdp.protocol.ASN1.ASN1EncodingRules;
 import de.coderarea.jrdp.protocol.ASN1.ASN1OctetString;
@@ -46,9 +45,6 @@ public class LicensingSequence extends SequenceHandler {
         sdi.setInitiator(new UserId(getConnectionHandler().getSettings().getChannelRegistry().getChannel("server").getId()));
         sdi.setChannelId(new ChannelId(getConnectionHandler().getSettings().getChannelRegistry().getChannel("io").getId()));
 
-        // TODO what is this for?
-        sdi.setReliability(true);
-
         // TODO what should this be?
         sdi.setDataPriority(DataPriority.medium);
 
@@ -66,7 +62,7 @@ public class LicensingSequence extends SequenceHandler {
         bos = new ByteArrayOutputStream();
         ASN1Encoder encoder = ASN1Encoder.newEncoder(ASN1EncodingRules.PER, bos);
         encoder.encode(domain);
-
+        debugDump("SDI-DomainMCSPDU.per", bos.toByteArray());
         getConnectionHandler().sendX224DataPacket(bos.toByteArray());
 
     }
