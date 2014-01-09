@@ -17,12 +17,12 @@
 package de.coderarea.jrdp.protocol;
 
 import de.coderarea.jrdp.ConnectionHandler;
-import de.coderarea.jrdp.SequenceHandler;
 import de.coderarea.jrdp.protocol.ASN1.ASN1Encoder;
 import de.coderarea.jrdp.protocol.ASN1.ASN1EncodingRules;
 import de.coderarea.jrdp.protocol.ASN1.ASN1OctetString;
 import de.coderarea.jrdp.protocol.MCS.*;
 import de.coderarea.jrdp.protocol.TS.TsValidLicenseData;
+import de.coderarea.jrdp.protocol.connection.SequenceHandler;
 
 import java.io.ByteArrayOutputStream;
 
@@ -45,9 +45,6 @@ public class LicensingSequence extends SequenceHandler {
         SendDataIndication sdi = new SendDataIndication();
         sdi.setInitiator(new UserId(getConnectionHandler().getSettings().getChannelRegistry().getChannel("server").getId()));
         sdi.setChannelId(new ChannelId(getConnectionHandler().getSettings().getChannelRegistry().getChannel("io").getId()));
-
-        // TODO what is this for?
-        sdi.setReliability(true);
 
         // TODO what should this be?
         sdi.setDataPriority(DataPriority.medium);
