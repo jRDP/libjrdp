@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
+ * Encoder/Decoder for ASN.1 OCTET STRING.
  * @author Sascha Biedermann
  */
 class ASN1OctetStringCoder extends ASN1ObjectCoder<ASN1OctetString> {

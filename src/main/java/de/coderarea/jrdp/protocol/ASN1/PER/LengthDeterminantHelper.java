@@ -20,7 +20,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 /**
- * 11.9 General rules for encoding a length determinant
+ * Static helper for encoding/decoding a length determinant
  *
  * @author Sascha Biedermann
  */

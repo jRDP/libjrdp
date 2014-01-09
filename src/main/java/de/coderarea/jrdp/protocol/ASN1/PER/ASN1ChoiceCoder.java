@@ -27,6 +27,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 /**
+ * Encoder/Decoder for ASN.1 CHOICE.
  * @author Sascha Biedermann
  */
 class ASN1ChoiceCoder extends ASN1ObjectCoder<ASN1Choice> {

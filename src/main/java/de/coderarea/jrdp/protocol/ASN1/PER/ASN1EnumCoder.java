@@ -27,6 +27,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
+ * Encoder/Decoder for ASN.1 ENUM.
  * @author Sascha Biedermann
  */
 class ASN1EnumCoder extends ASN1ObjectCoder {

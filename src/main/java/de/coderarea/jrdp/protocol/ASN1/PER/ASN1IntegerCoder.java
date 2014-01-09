@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
+ * Encoder/Decoder for ASN.1 INTEGER.
  * @author Sascha Biedermann
  */
 class ASN1IntegerCoder extends ASN1ObjectCoder<ASN1Integer> {

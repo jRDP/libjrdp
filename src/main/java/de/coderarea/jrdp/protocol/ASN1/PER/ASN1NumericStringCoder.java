@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
 /**
+ * Encoder/Decoder for ASN.1 NUMERIC STRING.
  * @author Sascha Biedermann
  */
 class ASN1NumericStringCoder extends ASN1ObjectCoder<ASN1NumericString> {
