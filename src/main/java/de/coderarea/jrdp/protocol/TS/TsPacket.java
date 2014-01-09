@@ -42,6 +42,9 @@ public abstract class TsPacket {
 
     protected abstract void encode(OutputStream output) throws IOException;
 
+    protected final void writeByte(OutputStream output, int value) throws IOException {
+        output.write(value & 0xFF);
+    }
 
     protected final void writeShort(OutputStream output, int value) throws IOException {
         output.write(value & 0xFF);

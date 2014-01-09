@@ -67,6 +67,9 @@ public class RDPChannelRegistry {
 
         channelList.add(new Channel("msg", 1999));
 
+        // The Server Channel ID store contains the MCS channel identifier of the server channel, which is
+        // defined as the arbitrarily chosen but fixed value 0x03EA (1002).
+        channelList.add(new Channel("server", 1002));
 
         channelList.add(new Channel("io", 1003));
         channelList.add(new Channel("rdpdr", 1004));

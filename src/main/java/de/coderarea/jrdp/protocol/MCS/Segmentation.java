@@ -38,6 +38,15 @@ public class Segmentation extends ASN1Sequence {
     @ASN1Tag(1)
     private Boolean end;
 
+    public Segmentation() {
+    }
+
+    public Segmentation(Boolean begin, Boolean end) {
+        this.begin = begin;
+        this.end = end;
+    }
+
+
     public Boolean getBegin() {
         return begin;
     }

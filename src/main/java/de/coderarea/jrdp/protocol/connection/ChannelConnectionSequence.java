@@ -14,14 +14,14 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with libjrdp. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.coderarea.jrdp.protocol;
+package de.coderarea.jrdp.protocol.connection;
 
 import de.coderarea.jrdp.ConnectionHandler;
-import de.coderarea.jrdp.SequenceHandler;
 import de.coderarea.jrdp.protocol.ASN1.ASN1Decoder;
 import de.coderarea.jrdp.protocol.ASN1.ASN1Encoder;
 import de.coderarea.jrdp.protocol.ASN1.ASN1EncodingRules;
 import de.coderarea.jrdp.protocol.MCS.*;
+import de.coderarea.jrdp.protocol.RDPChannelRegistry;
 import de.coderarea.jrdp.protocol.TS.TsBasicSecurityHeader;
 import de.coderarea.jrdp.protocol.TS.TsInfoPacket;
 import de.coderarea.jrdp.protocol.TS.TsSecurityFlag;

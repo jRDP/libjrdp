@@ -14,10 +14,9 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with libjrdp. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.coderarea.jrdp.protocol;
+package de.coderarea.jrdp.protocol.connection;
 
 import de.coderarea.jrdp.ConnectionHandler;
-import de.coderarea.jrdp.SequenceHandler;
 import de.coderarea.jrdp.protocol.X224.RdpProtocol;
 import de.coderarea.jrdp.protocol.X224.X224ConnectionConfirm;
 import de.coderarea.jrdp.protocol.X224.X224ConnectionRequest;
@@ -28,8 +27,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
- * Created by uidv6498 on 13.12.13.
- *
  * @author Sascha Biedermann
  */
 public class ConnectionInitiationSequence extends SequenceHandler {

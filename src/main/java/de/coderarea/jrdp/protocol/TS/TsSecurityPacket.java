@@ -40,6 +40,9 @@ public class TsSecurityPacket extends TsPacket {
         decode();
     }
 
+    protected TsSecurityPacket() {
+    }
+
     @Override
     protected void decode() throws IOException {
         length = readInteger();
@@ -49,6 +52,14 @@ public class TsSecurityPacket extends TsPacket {
     @Override
     protected void encode(OutputStream output) throws IOException {
 
+    }
+
+    public TsBasicSecurityHeader getHeader() {
+        return header;
+    }
+
+    protected void setHeader(TsBasicSecurityHeader header) {
+        this.header = header;
     }
 
     @Override
