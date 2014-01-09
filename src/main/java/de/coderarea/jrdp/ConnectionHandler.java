@@ -32,8 +32,6 @@ import java.io.IOException;
 import java.net.Socket;
 
 /**
- * Created by uidv6498 on 12.12.13.
- *
  * @author Sascha Biedermann
  */
 public class ConnectionHandler implements Runnable {

@@ -41,8 +41,6 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Created by uidv6498 on 13.12.13.
- *
  * @author Sascha Biedermann
  */
 public class BasicSettingsExchangeSequence extends SequenceHandler {

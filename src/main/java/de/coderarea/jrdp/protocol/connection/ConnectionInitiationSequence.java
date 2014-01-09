@@ -27,8 +27,6 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
- * Created by uidv6498 on 13.12.13.
- *
  * @author Sascha Biedermann
  */
 public class ConnectionInitiationSequence extends SequenceHandler {
