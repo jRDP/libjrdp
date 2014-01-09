@@ -17,6 +17,8 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
+ * Represents an ASN.1 NULL.
+ * No bits a read or written.
  * @author Sascha Biedermann
  */
 public class ASN1Null extends ASN1Object {

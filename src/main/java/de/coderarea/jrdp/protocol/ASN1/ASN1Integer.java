@@ -17,7 +17,10 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
+ * Represents an ASN.1 INTEGER
+ *
  * @author Sascha Biedermann
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1ValueConstraint
  */
 
 public class ASN1Integer extends ASN1Object {

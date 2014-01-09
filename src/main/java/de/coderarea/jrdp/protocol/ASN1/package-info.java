@@ -14,11 +14,10 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with libjrdp. If not, see <http://www.gnu.org/licenses/>.
  */
+
 /**
- *
  * ASN.1 - Abstract Syntax Notation One. </br>
  * This package models ASN.1 data as Plain Old Java Objects (POJOs).
- *
  *
  * @author Sascha Biedermann
  * @see <a href="http://www.itu.int/rec/T-REC-X.690-200811-I/en">ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER)</a>

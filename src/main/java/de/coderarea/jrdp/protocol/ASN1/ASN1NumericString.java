@@ -17,7 +17,8 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
- * 30 Encoding the restricted character string types
+ * Represents an ASN.1 NUMERIC STRING.
+ * Encoding the restricted character string types
  *
  * @author Sascha Biedermann
  */
