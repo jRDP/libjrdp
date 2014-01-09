@@ -1,7 +1,7 @@
 libjrdp
 =======
 
-libjrdp is part of the jRDP project. Our goal is to implement the RDP (Remote Desktop Protocol) in Java. For now we focus on the server side as there are other projects implementing RDP clients.
+libjrdp is part of the jRDP project. Our goal is to implement the RDP (Remote Desktop Protocol) in Java. Yes, we're talking about the RDP as specified by Microsoft. The `mstsc.exe` client can connect to a jRDP server.  For now we focus on the server side as there are other projects implementing RDP clients.
 
 Status
 ------
