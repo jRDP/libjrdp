@@ -19,13 +19,23 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Applies a size constraint to an ASN.1 Integer.
  * @author Sascha Biedermann
  */
 @Documented
 @Target({ElementType.TYPE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ASN1ValueConstraint {
+
+    /**
+     * Lower Bound
+     * @return lower bound
+     */
     int lb() default Integer.MIN_VALUE;
 
+    /**
+     * Upper Bound
+     * @return upper bound
+     */
     int ub() default Integer.MAX_VALUE;
 }

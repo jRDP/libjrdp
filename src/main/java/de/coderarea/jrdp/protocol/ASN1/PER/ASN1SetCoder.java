@@ -24,7 +24,8 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * @author Sascha Biedermann
+ * Encoder/Decoder for ASN.1 SET OF.
+ *  @author Sascha Biedermann
  */
 class ASN1SetCoder extends ASN1ObjectCoder<List> {
     private final static Logger logger = LogManager.getLogger(ASN1SetCoder.class);

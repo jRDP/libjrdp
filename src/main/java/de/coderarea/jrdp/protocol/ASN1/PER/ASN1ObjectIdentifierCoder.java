@@ -23,6 +23,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
+ *
  * @author Sascha Biedermann
  */
 class ASN1ObjectIdentifierCoder extends ASN1ObjectCoder<ASN1ObjectIdentifier> {

@@ -19,6 +19,7 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Applies a size constraint to an ASN.1 Object.
  * @author Sascha Biedermann
  */
 @Documented

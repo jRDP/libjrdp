@@ -19,6 +19,8 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Specifies the order of ASN.1 Objects in a SEQUENCE.
+ * (not sure, if "Tag" is the right term to use for this)
  * @author Sascha Biedermann
  */
 @Documented

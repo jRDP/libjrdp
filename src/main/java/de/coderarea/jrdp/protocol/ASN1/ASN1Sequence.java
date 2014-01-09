@@ -17,9 +17,12 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
- * 19 Encoding the sequence type
+ * Represents an ASN.1 SEQUENCE.
  *
  * @author Sascha Biedermann
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Tag
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Optional
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Extensible
  */
 public abstract class ASN1Sequence extends ASN1Object {
     public ASN1Sequence() {

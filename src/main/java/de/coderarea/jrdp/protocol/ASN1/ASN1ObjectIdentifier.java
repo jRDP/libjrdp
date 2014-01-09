@@ -20,7 +20,8 @@ import java.io.IOException;
 import java.util.Arrays;
 
 /**
- * OBJECT IDENTIFIER
+ * Represents an ASN.1 OBJECT IDENTIFIER.
+ * TODO: not really implemented
  *
  * @author Sascha Biedermann
  */

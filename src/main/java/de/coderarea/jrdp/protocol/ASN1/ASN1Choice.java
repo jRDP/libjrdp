@@ -17,6 +17,10 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
+ * Represents an ASN.1 CHOICE.
+ *
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Extensible
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1Tag
  * @author Sascha Biedermann
  */
 public abstract class ASN1Choice extends ASN1Object {

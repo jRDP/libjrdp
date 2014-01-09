@@ -27,6 +27,7 @@ import java.text.MessageFormat;
 import java.util.List;
 
 /**
+ * * Encoder/Decoder for ASN.1 SEQUENCE.
  * @author Sascha Biedermann
  */
 class ASN1SequenceCoder extends ASN1ObjectCoder<ASN1Sequence> {

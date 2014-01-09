@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicReference;
 
 /**
- * Base class for all PerCoders
+ * Abstract base class for all PER coders.
  *
  * @author Sascha Biedermann
  */

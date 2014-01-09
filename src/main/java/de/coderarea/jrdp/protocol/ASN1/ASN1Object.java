@@ -17,7 +17,7 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
- * Base class for all ASN.1 types.
+ * Abstract base class for all ASN.1 types.
  *
  * @author Sascha Biedermann
  */

@@ -19,6 +19,10 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Marks an ASN.1 Object as extensible. This does not mean that extensions are supported.
+ * If an extension is present in the data stream, decoding will fail. The marker is required to indicate that
+ * the extension bit needs to be read from the stream while decoding.
+ *
  * @author Sascha Biedermann
  */
 @Documented

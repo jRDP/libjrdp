@@ -22,7 +22,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 /**
- * 11.5 Encoding of a constrained whole number
+ * Static helper for encoding/decoding of a constrained whole number.
  *
  * @author Sascha Biedermann
  */

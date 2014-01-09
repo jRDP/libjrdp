@@ -17,10 +17,18 @@
 package de.coderarea.jrdp.protocol.ASN1;
 
 /**
- * User: sascha
- * Date: 27.12.13
- * Time: 15:15
+ * Enumeration of ASN.1 encoding rules
+ *
+ * @author Sascha Biedermann
  */
 public enum ASN1EncodingRules {
-    PER, BER
+    /**
+     * Packed Encoding Rules
+     */
+    PER,
+
+    /**
+     * Basic Encoding Rules
+     */
+    BER
 }

@@ -19,6 +19,7 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Marks an ASN.1 SEQUENCE member as optional.
  * @author Sascha Biedermann
  */
 @Documented

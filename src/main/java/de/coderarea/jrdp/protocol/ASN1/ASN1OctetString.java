@@ -16,6 +16,12 @@
  */
 package de.coderarea.jrdp.protocol.ASN1;
 
+/**
+ * Represents an ASN.1 OCTET STRING.
+ * @see de.coderarea.jrdp.protocol.ASN1.annotation.ASN1SizeConstraint
+ *
+ * @author Sascha Biedermann
+ */
 public class ASN1OctetString extends ASN1Object {
     byte[] value;
 

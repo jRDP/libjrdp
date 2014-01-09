@@ -19,11 +19,17 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Applies an alphabet constraint on an ASN.1 numeric string.
  * @author Sascha Biedermann
  */
 @Documented
 @Target({ElementType.TYPE, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ASN1AlphabetConstraint {
+
+    /**
+     * Set the allowed alphabet.
+     * @return allowed alphabet
+     */
     String value();
 }

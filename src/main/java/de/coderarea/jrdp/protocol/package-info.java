@@ -14,22 +14,11 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with libjrdp. If not, see <http://www.gnu.org/licenses/>.
  */
-package de.coderarea.jrdp.protocol.ASN1.annotation;
-
-import java.lang.annotation.*;
 
 /**
- * Declares the inner type for ASN.1 "SET OF" Objects which get modeled as List&lt;&gt;
+ * RDP - Remote Desktop Protocol. </br>
+ * This package contains an implementation of the Remote Desktop Protocol.
+ *
  * @author Sascha Biedermann
  */
-@Documented
-@Target({ElementType.TYPE})
-@Retention(RetentionPolicy.RUNTIME)
-public @interface ASN1InnerType {
-
-    /**
-     * Type which the ASN.1 "SET OF" contains.
-     * @return type
-     */
-    Class value();
-}
+package de.coderarea.jrdp.protocol;
