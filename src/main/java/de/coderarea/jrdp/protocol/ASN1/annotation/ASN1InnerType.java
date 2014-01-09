@@ -19,11 +19,17 @@ package de.coderarea.jrdp.protocol.ASN1.annotation;
 import java.lang.annotation.*;
 
 /**
+ * Declares the inner type for ASN.1 "SET OF" Objects which get modeled as List&lt;&gt;
  * @author Sascha Biedermann
  */
 @Documented
 @Target({ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ASN1InnerType {
+
+    /**
+     * Type which the ASN.1 "SET OF" contains.
+     * @return type
+     */
     Class value();
 }
